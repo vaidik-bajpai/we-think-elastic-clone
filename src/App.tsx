@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Hero from './features/landing-page/view/hero';
 import AnimatedLoader from './features/landing-page/components/animated-loader';
 import { useEffect } from 'react';
+import GrowVid from './features/landing-page/view/grow-vid';
 
 function App() {
   gsap.registerPlugin(ScrollTrigger);
@@ -22,6 +23,7 @@ function App() {
         <AnimatedLoader />
       </div>
       <Hero />
+      <GrowVid />
     </div>
   )
 }
