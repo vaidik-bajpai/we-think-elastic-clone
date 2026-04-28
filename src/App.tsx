@@ -1,0 +1,29 @@
+import './App.css'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Hero from './features/landing-page/view/hero';
+import AnimatedLoader from './features/landing-page/components/animated-loader';
+import { useEffect } from 'react';
+
+function App() {
+  gsap.registerPlugin(ScrollTrigger);
+  
+  useEffect(() => {
+    gsap.to('#loader-container', {
+      delay: 1.65,
+      yPercent: -100,
+      duration: 1,
+      ease: "power.inOut",
+    })
+  }, [])
+  return (
+    <div className='bg-brandBlack min-h-screen w-full'>
+      <div id="loader-container" className="fixed inset-0 grid place-content-center bg-brandYellow z-50">
+        <AnimatedLoader />
+      </div>
+      <Hero />
+    </div>
+  )
+}
+
+export default App
