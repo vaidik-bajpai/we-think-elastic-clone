@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import GrowVid from './features/landing-page/view/grow-vid';
 import HeroStatement from './features/landing-page/view/hero-statement';
 import OurProjects from './features/landing-page/view/our-projects';
+import BorderAnimation from './features/landing-page/components/border-animation';
 
 function App() {
   gsap.registerPlugin(ScrollTrigger);
@@ -28,6 +29,9 @@ function App() {
       <GrowVid />
       <HeroStatement />
       <OurProjects />
+      <div id="discover-projects" className='grid place-content-center py-24'>
+        <BorderAnimation />
+      </div>
     </div>
   )
 }
