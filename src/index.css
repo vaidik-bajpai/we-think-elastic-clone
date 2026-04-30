@@ -53,7 +53,9 @@
 @theme {
   --color-brandYellow: #f3c77c;
   --color-brandBlack: #151414;
+  --color-brandBlue: #9ac1cb;
   --color-beige: #e7cfb1;
+  --color-dark: #151414;
 
   --font-grotesk: "Space Grotesk", sans-serif;
   --font-helvetica: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
