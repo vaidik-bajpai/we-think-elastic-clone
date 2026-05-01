@@ -1,41 +1,87 @@
 import gsap from "gsap"
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 
 const Expertise = () => {
-    useEffect(() => {
-        gsap.to("#expertise", {
-            x: "-135vw",
-            scrollTrigger: {
-                trigger: "#expertise-container",
-                scroller: "body",
-                scrub: 2,
-                pin: true,
-                start: "bottom bottom",
-                end: "bottom+=3000 top"
-            }
-        })
+    const containerRef = useRef<HTMLDivElement | null>(null)
+    const trackRef = useRef<HTMLDivElement | null>(null)
 
-        gsap.to(".floating-image", {
-            x: "-140vw", 
-            scrollTrigger: {
-                trigger: "#expertise-container",
-                scrub: 2,
-                start: "bottom bottom",
-                end: "bottom+=3000 top"
-            }
-        })
+    useEffect(() => {
+        const container = containerRef.current
+        const track = trackRef.current
+
+        if (!container || !track) return
+
+        const distance = track.scrollWidth - window.innerWidth
+
+        const animate = () => {
+            gsap.to(track, {
+                x: -distance,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: container,
+                    pin: true,
+                    scrub: 2,
+                    start: "top top",
+                    end: `+=${distance}`,
+                },
+            })
+
+            gsap.utils.toArray(".expertise-images").map((image) => {
+                gsap.to(image, {
+                    xPercent: -30,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: container,
+                        scrub: 2,
+                        start: "top top",
+                        end: `+=${distance}`,
+                    },
+                })
+            })
+        }
+
+        animate()
     }, [])
+
     return (
-        <div id="expertise-container" className="relative min-h-screen bg-brandBlue leading-none overflow-hidden text-dark">
-            <div id="expertise" className="uppercase text-[80vh] pl-16 pt-18 font-semibold tracking-tighter">
-                Expertises
+        <div
+            ref={containerRef}
+            id="expertise-container"
+            className="relative h-screen bg-brandBlue overflow-hidden text-dark"
+        >
+            <div
+                ref={trackRef}
+                id="expertise-track"
+                className="relative h-screen w-max flex items-center"
+            >
+                <h1 className="uppercase text-[80vh] px-16 font-semibold tracking-tighter leading-none">
+                    Expertises
+                </h1>
+
+                <div className="expertise-images absolute left-[45vw] bottom-[11vh] rotate-[7deg]">
+                    <img
+                        src="/556ce542d7fdbd78d032e.svg"
+                        alt=""
+                        className="w-80 h-auto"
+                    />
+                </div>
+
+                <div className="expertise-images absolute left-[108vw] top-[5vh] -rotate-[5deg]">
+                    <img
+                        src="/6a714ad31db5d83bc967b.svg"
+                        alt=""
+                        className="w-72 h-auto"
+                    />
+                </div>
+
+                <div className="expertise-images absolute left-[175vw] bottom-[3vh] rotate-[4deg]">
+                    <img
+                        src="/8a2db0cd90582eb4b877d.svg"
+                        alt=""
+                        className="w-80 h-auto"
+                    />
+                </div>
             </div>
-            <div className="floating-image absolute left-[45%] bottom-[11%] translate-y-1/2 inline-block rotate-[7deg]">
-                <img src="/556ce542d7fdbd78d032e.svg" alt="" className="w-80 h-auto" />
-            </div>
-            {/* <div className="floating-image-2 inline-block rotate-[7deg]">
-                <img src="/6a714ad31db5d83bc967b.svg" alt="" className="w-80 h-auto" />
-            </div> */}
         </div>
     )
 }

@@ -36,7 +36,7 @@ const ServiceColumn = ({title, services}: {
             <div>
                 {services.map((service) => {
                     return (
-                        <div className="text-2xl font-[350] opacity-[80%]">
+                        <div key={service} className="text-2xl font-[350] opacity-[80%]">
                             {service}
                         </div>
                     )
