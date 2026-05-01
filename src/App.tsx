@@ -9,6 +9,7 @@ import HeroStatement from './features/landing-page/view/hero-statement';
 import OurProjects from './features/landing-page/view/our-projects';
 import BorderAnimation from './features/landing-page/components/border-animation';
 import Expertise from './features/landing-page/view/expertise';
+import ServicesSection from './features/landing-page/view/services-section';
 
 function App() {
   gsap.registerPlugin(ScrollTrigger);
@@ -34,6 +35,7 @@ function App() {
         <BorderAnimation />
       </div>
       <Expertise />
+      <ServicesSection />
     </div>
   )
 }
