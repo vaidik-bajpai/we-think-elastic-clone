@@ -16,22 +16,22 @@ const HeroStatement = () => {
         })
     }, [])
     return (
-        <div className="min-h-screen w-full grid place-content-center">
-            <div id="hero-statement-container" className="relative text-beige text-left">
+        <div className="min-h-screen w-full grid place-content-center font-helvetica">
+            <div id="hero-statement-container" className="relative text-beige text-left leading-tight">
 
-                <div className="text-[10vw] font-semibold leading-none tracking-tighter overflow-hidden">
-                    <span className="text-[9vw] italic heroWord inline-block">nous</span> <span className="uppercase heroWord inline-block">aidons</span>
+                <div className="text-[10vw] font-medium leading-none overflow-hidden">
+                    <span className="italic heroWord inline-block font-[50] font-ivy">nous</span> <span className=" uppercase heroWord inline-block">aidons</span>
                 </div>
 
-                <div className="text-[10vw] font-semibold uppercase leading-none tracking-tighter overflow-hidden">
+                <div className="text-[10vw] font-medium uppercase leading-none overflow-hidden">
                     <span className="heroWord inline-block">les</span> <span className="heroWord inline-block">marques</span>
                 </div>
 
-                <div className="text-right leading-none text-[10vw] font-semibold tracking-tighter overflow-hidden">
-                    <span className="text-[9vw] italic heroWord inline-block">à </span> <span className="uppercase heroWord inline-block">grandir</span>
+                <div className="text-right leading-none text-[10vw] font-medium overflow-hidden">
+                    <span className="text-[9vw] italic heroWord inline-block font-ivy">à </span> <span className="uppercase heroWord inline-block">grandir</span>
                 </div>
 
-                <div className="text-[10vw] font-semibold uppercase leading-none tracking-tighter overflow-hidden">
+                <div className="text-[10vw] font-medium uppercase leading-none overflow-hidden">
                     <span className="heroWord inline-block">plus</span> <span className="heroWord inline-block">vite</span>
                 </div>
 

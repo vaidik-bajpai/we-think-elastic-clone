@@ -2,53 +2,67 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "Helvetica Neue";
-  src: url("/helvetica-neue-5/HelveticaNeueRoman.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Helvetica Neue";
-  src: url("/helvetica-neue-5/HelveticaNeueBold.otf") format("opentype");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Helvetica Neue";
-  src: url("/helvetica-neue-5/HelveticaNeueItalic.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Helvetica Neue";
-  src: url("/helvetica-neue-5/HelveticaNeueLight.otf") format("opentype");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Helvetica Neue";
-  src: url("/helvetica-neue-5/HelveticaNeueMedium.otf") format("opentype");
+  font-family: "Helvetica Neue Medium";
+  src: url("/helveticaneue-medium_I4FDO/HelveticaNeue Medium/HelveticaNeue Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Helvetica Neue";
-  src: url("/helvetica-neue-5/HelveticaNeueThin.otf") format("opentype");
-  font-weight: 100;
+  font-family: "Degular Display";
+  src: url("/degular-font-family/DegularDisplayDemo-Regular.otf") format("opentype");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Helvetica Neue";
-  src: url("/helvetica-neue-5/HelveticaNeueBlack.otf") format("opentype");
+  font-family: "Degular Display";
+  src: url("/degular-font-family/DegularDisplayDemo-Semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Degular Display";
+  src: url("/degular-font-family/DegularDisplayDemo-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Degular Display";
+  src: url("/degular-font-family/DegularDisplayDemo-Black.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Ivy Presto Headline";
+  src: url("/Ivy-Presto-font-Family/fonts/fonnts.com-Ivy-Presto-Headline-.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: "Ivy Presto Headline";
+  src: url("/Ivy-Presto-font-Family/fonts/fonnts.com-Ivy-Presto-Headline-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ivy Presto Headline";
+  src: url("/Ivy-Presto-font-Family/fonts/fonnts.com-Ivy-Presto-Headline-Semi-Bold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ivy Presto Headline";
+  src: url("/Ivy-Presto-font-Family/fonts/fonnts.com-Ivy-Presto-Headline-Thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+} */
 
 @theme {
   --color-brandYellow: #f3c77c;
@@ -58,6 +72,8 @@
   --color-dark: #151414;
 
   --font-grotesk: "Space Grotesk", sans-serif;
-  --font-helvetica: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --font-helvetica: "Helvetica Neue Medium", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --font-degular: "Degular Display", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --font-ivy: "Ivy Presto Headline", Georgia, serif;
 }
 

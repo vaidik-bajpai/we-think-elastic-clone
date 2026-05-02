@@ -26,9 +26,14 @@ const Expertise = () => {
                 },
             })
 
-            gsap.utils.toArray(".expertise-images").map((image) => {
+            gsap.utils.toArray(".expertise-images").map((image, index) => {
+                gsap.set(image, {
+                    xPercent: -50,
+                    yPercent: -50,
+                })
+
                 gsap.to(image, {
-                    xPercent: -30,
+                    x: index === 0 ? -200 : index === 1 ? -150 : -200,
                     ease: "none",
                     scrollTrigger: {
                         trigger: container,
@@ -47,18 +52,18 @@ const Expertise = () => {
         <div
             ref={containerRef}
             id="expertise-container"
-            className="relative h-screen bg-brandBlue overflow-hidden text-dark"
-        >
+            className="relative h-screen bg-brandBlue overflow-hidden text-dark font-helvetica"
+        > 
             <div
                 ref={trackRef}
                 id="expertise-track"
                 className="relative h-screen w-max flex items-center"
             >
-                <h1 className="uppercase text-[80vh] px-16 font-semibold tracking-tighter leading-none">
+                <h1 className="uppercase text-[80vh] px-16 font-medium tracking-tighter leading-none">
                     Expertises
                 </h1>
 
-                <div className="expertise-images absolute left-[45vw] bottom-[11vh] rotate-[7deg]">
+                <div className="expertise-images absolute left-[53vw] top-[80%] rotate-[7deg]">
                     <img
                         src="/556ce542d7fdbd78d032e.svg"
                         alt=""
@@ -66,7 +71,7 @@ const Expertise = () => {
                     />
                 </div>
 
-                <div className="expertise-images absolute left-[108vw] top-[5vh] -rotate-[5deg]">
+                <div className="expertise-images absolute left-[120vw] top-[20%] -rotate-[5deg]">
                     <img
                         src="/6a714ad31db5d83bc967b.svg"
                         alt=""
@@ -74,7 +79,7 @@ const Expertise = () => {
                     />
                 </div>
 
-                <div className="expertise-images absolute left-[175vw] bottom-[3vh] rotate-[4deg]">
+                <div className="expertise-images absolute left-[188vw] top-[80%] rotate-[4deg]">
                     <img
                         src="/8a2db0cd90582eb4b877d.svg"
                         alt=""

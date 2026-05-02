@@ -22,14 +22,14 @@ const Hero = () => {
     return (
         <div className="text-brandYellow">
             <Header />
-            <div className=" font-[1000] overflow-hidden text-[44vw] tracking-tighter font-grotesk leading-none ml-12 -mt-16">
+            <div className=" font-[1000] overflow-hidden text-[50vw] font-degular leading-none ml-12 -mt-32">
                 <span className="letter inline-block">h</span>
                 <span className="letter inline-block">e</span>
                 <span className="letter inline-block">l</span>
                 <span className="letter inline-block">l</span>
                 <span className="letter inline-block">o</span>
             </div>
-            <div id="hero-desc" className="my-12 w-full text-center text-4xl uppercase font-helvetica">
+            <div id="hero-desc" className="mb-12 w-full text-center text-4xl uppercase font-helvetica">
                 <div>Nous sommes l'équipe</div>
                 <div>we think elastic</div>
             </div>

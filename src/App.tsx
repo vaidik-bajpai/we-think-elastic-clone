@@ -12,6 +12,7 @@ import Expertise from './features/landing-page/view/expertise';
 import ServicesSection from './features/landing-page/view/services-section';
 import LogosSection from './features/landing-page/view/logos-section';
 import LetsTalk from './features/landing-page/view/lets-talk';
+import { FooterSection } from './features/landing-page/view/footer-section';
 
 function App() {
   gsap.registerPlugin(ScrollTrigger);
@@ -39,7 +40,8 @@ function App() {
       <Expertise />
       <ServicesSection />
       <LogosSection />
-      <LetsTalk />
+      <LetsTalk /> 
+      <FooterSection /> 
     </div>
   )
 }

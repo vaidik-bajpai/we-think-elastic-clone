@@ -28,6 +28,25 @@ const LetsTalk = () => {
             }
         })
     }, [])
+
+    const onMouseEnter = () => {
+        gsap.fromTo("#bon-cafe-underline", {
+            scaleX: 0,
+            transformOrigin: "left center",
+        }, {
+            scaleX: 1,
+            duration: 1.3,
+            ease: "circ.inOut",
+        })
+    } 
+
+    const onMouseLeave = () => {
+        gsap.killTweensOf('#bon-cafe-underline')
+
+        gsap.set("#bon-cafe-underline", {
+            scaleX: 1,
+        })
+    }
     return (
         <div className="bg-beige w-full text-dark py-32 ">
             <div id="text-container" className="flex flex-col items-center gap-12">
@@ -39,7 +58,11 @@ const LetsTalk = () => {
                         <div className="text-line">projet ? parlons-en</div>
                     </div>
                     <div className="overflow-hidden">
-                        <div className="text-line">autour d'un Bon café</div>
+                        <div className="text-line">autour d'un <span className="relative inline-block" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+                                Bon café
+                                <span id="bon-cafe-underline" className="absolute left-0 bottom-0 w-[102%] h-1 inline-block bg-dark"></span>
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <div id="gif-container" className="w-fit aspect-square overflow-hidden">
