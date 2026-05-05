@@ -8,7 +8,7 @@ const HeroStatement = () => {
             scrollTrigger: {
                 trigger: "#hero-statement-container",
                 start: "center bottom",
-                markers: true
+                markers: import.meta.env.VITE_ENV === "dev"
             },
             duration: 0.5,
             stagger: 0.05,

@@ -12,7 +12,7 @@ const LetsTalk = () => {
                 start: "45 bottom",
                 end: "bottom bottom",
                 scrub: 2,
-                markers: true,
+                markers: import.meta.env.VITE_ENV === "dev",
             }
         })
 
@@ -24,7 +24,7 @@ const LetsTalk = () => {
                 start: "top bottom",
                 end: "bottom bottom",
                 scrub: 2,
-                markers: true,
+                markers: import.meta.env.VITE_ENV === "dev",
             }
         })
     }, [])

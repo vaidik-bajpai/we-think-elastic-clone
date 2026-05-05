@@ -26,7 +26,7 @@ const Expertise = () => {
                 },
             })
 
-            gsap.utils.toArray(".expertise-images").map((image, index) => {
+            gsap.utils.toArray<HTMLElement>(".expertise-images").map((image, index) => {
                 gsap.set(image, {
                     xPercent: -50,
                     yPercent: -50,

@@ -8,7 +8,7 @@ const GrowVid = () => {
             scrollTrigger: {
                 trigger: "#grow-vid-container",
                 scroller: "body",
-                markers: true,
+                markers: import.meta.env.VITE_ENV === "dev",
                 scrub: 1,
                 start: "top bottom",
                 end: "bottom bottom",

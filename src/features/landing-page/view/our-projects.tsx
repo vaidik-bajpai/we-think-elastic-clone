@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react"
+import { useEffect } from "react"
 import type { MouseEvent } from "react"
 import gsap from "gsap"
 import { ProjectCard } from "../components/project-card"
@@ -28,7 +28,7 @@ const OurProjects = () => {
                     scrub: 2,
                     start: "top bottom",
                     end: "bottom top",
-                    markers: true,
+                    markers: import.meta.env.VITE_ENV === "dev",
                 }
             })
 
@@ -39,7 +39,7 @@ const OurProjects = () => {
                     scrub: 2,
                     start: "top bottom",
                     end: "bottom top",
-                    markers: true,
+                    markers: import.meta.env.VITE_ENV === "dev",
                 }
             })
         })
